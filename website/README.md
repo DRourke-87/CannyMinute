@@ -65,8 +65,11 @@ At your domain DNS provider set:
 - CNAME `www` -> `DRourke-87.github.io`
 
 Then in GitHub Pages settings:
-- Custom domain: `cannyminute.com`
+- Custom domain: `www.cannyminute.com`
 - Enforce HTTPS: enabled.
+
+Optional:
+- Add a forward from `cannyminute.com` to `https://www.cannyminute.com`.
 
 The `website/CNAME` file is included for this.
 
