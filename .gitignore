@@ -2,6 +2,9 @@
 Thumbs.db
 Desktop.ini
 
+# Local Android app workspace (kept out of website repo)
+app/
+
 # Logs/temp
 *.log
 *.tmp
