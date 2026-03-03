@@ -26,7 +26,7 @@ Open `http://localhost:8080`.
 
 ## 2) Create Google Sheet collector
 1. Create a new Google Sheet named `CannyMinute Beta`.
-2. Copy the Sheet ID from the URL. 1TUoDRzCHsEDZEJdQGn9o-3Ub5Ph2NQH668RBEHUSaZk
+2. Copy the Sheet ID from the URL. 
 3. Go to `https://script.google.com`, create a new Apps Script project.
 4. Paste contents of `collector/google-apps-script.gs`.
 5. In Apps Script:
