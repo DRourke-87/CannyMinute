@@ -1,0 +1,20 @@
+services:
+  emulator:
+    image: cannyminute/android-test:local
+    build:
+      context: .
+      dockerfile: docker/android-test/Dockerfile
+    container_name: cannyminute-android-emulator
+    environment:
+      EMULATOR_DEVICE: "Samsung Galaxy S10"
+      WEB_VNC: "true"
+      APPIUM: "false"
+      # Stability-first profile for local checkout-flow testing.
+      EMULATOR_ARGS: "-no-snapshot -no-snapshot-load -no-snapshot-save -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -camera-front none -cores 2 -memory 2048"
+    ports:
+      - "6080:6080"
+      - "5554:5554"
+      - "5555:5555"
+    volumes:
+      - ./:/workspace
+    working_dir: /workspace

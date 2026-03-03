@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CannyMinute</string>
+    <string name="short_description">A minute before you buy</string>
+    <string name="accessibility_service_description">Shows a calm checkout pause so you can do a quick check before paying.</string>
+    <string name="cooldown_notification_title">Quick check ready</string>
+    <string name="cooldown_notification_message">No judgement, just a minute.</string>
+    <string name="cooldown_notification_channel_name">CannyMinute check-ins</string>
+    <string name="cooldown_notification_channel_description">Fallback alerts when quick check cannot open directly.</string>
+</resources>
+

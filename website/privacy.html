@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CannyMinute | Privacy</title>
+    <meta
+        name="description"
+        content="CannyMinute privacy summary. On-device by default, and no screen text is stored unless diagnostics is enabled."
+    />
+    <meta name="theme-color" content="#1e6db6" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="ambient ambient-left" aria-hidden="true"></div>
+    <div class="ambient ambient-right" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="CannyMinute home">
+            <img src="assets/cannyminute-logo.png" alt="" />
+            <span>CannyMinute</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="index.html#how">How it works</a>
+            <a href="index.html#beta">Join beta</a>
+        </nav>
+    </header>
+
+    <main class="legal-main">
+        <section class="legal-card reveal">
+            <p class="eyebrow">Privacy summary</p>
+            <h1>Privacy by default</h1>
+            <p>
+                CannyMinute is designed to reduce impulse buying with on-device processing. We do
+                not sell personal data. We do not store raw screen text unless you explicitly turn
+                on diagnostics in the app.
+            </p>
+
+            <h2>What we collect on this website</h2>
+            <ul>
+                <li>Beta waitlist fields you submit: name, email, and optional shopping context.</li>
+                <li>Technical metadata for anti-spam and troubleshooting, like submit timestamp.</li>
+            </ul>
+
+            <h2>How we use it</h2>
+            <ul>
+                <li>To send beta invitations, launch updates, and occasional product feedback requests.</li>
+                <li>To understand rough demand and improve onboarding.</li>
+            </ul>
+
+            <h2>Your choices</h2>
+            <ul>
+                <li>You can request removal from the beta list at any time.</li>
+                <li>You can unsubscribe from emails using the unsubscribe link in messages.</li>
+                <li>You can disable app protection at any time in app settings.</li>
+            </ul>
+
+            <p>
+                For data requests, contact: <a href="mailto:hello@cannyminute.com">hello@cannyminute.com</a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span id="year"></span> CannyMinute. A minute before you buy.</p>
+        <a href="index.html">Home</a>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

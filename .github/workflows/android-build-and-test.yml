@@ -1,0 +1,54 @@
+name: Android Build and Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      run_instrumented:
+        description: "Run docker-android instrumentation tests (requires self-hosted Linux runner with KVM)"
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  unit-tests:
+    name: Unit Tests (Docker)
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Make scripts executable
+        run: chmod +x scripts/android/*.sh gradlew
+
+      - name: Run unit tests in docker image
+        run: ./scripts/android/run-unit-tests.sh
+
+  instrumented-tests:
+    name: Instrumented Tests (docker-android)
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.run_instrumented }}
+    runs-on: [self-hosted, linux, x64, kvm]
+    timeout-minutes: 120
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Make scripts executable
+        run: chmod +x scripts/android/*.sh gradlew
+
+      - name: Run connected tests in docker-android emulator
+        run: ./scripts/android/run-instrumented-tests.sh
+
+      - name: Upload android test reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-test-reports
+          path: |
+            app/build/reports/
+            app/build/outputs/androidTest-results/
+

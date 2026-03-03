@@ -1,0 +1,22 @@
+# Android/Gradle
+.gradle/
+build/
+*/build/
+local.properties
+
+# IntelliJ/Android Studio
+.idea/
+*.iml
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Logs/temp
+*.log
+*.tmp
+.tmp/
+supervisord.pid
+
+# Misc
+.DS_Store

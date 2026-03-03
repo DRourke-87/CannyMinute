@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CannyMinute | A minute before you buy</title>
+    <meta
+        name="description"
+        content="CannyMinute adds a calm checkout pause in Android shopping apps and browsers. Join the beta waitlist."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="CannyMinute | A minute before you buy" />
+    <meta
+        property="og:description"
+        content="Quick check, then you can still buy it. Privacy-first checkout pause for Android."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://cannyminute.com" />
+    <meta property="og:image" content="https://cannyminute.com/assets/cannyminute-og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#1e6db6" />
+    <link rel="canonical" href="https://cannyminute.com/" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="ambient ambient-left" aria-hidden="true"></div>
+    <div class="ambient ambient-right" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <a class="brand" href="#top" aria-label="CannyMinute home">
+            <img src="assets/cannyminute-logo.png" alt="" />
+            <span>CannyMinute</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="#how">How it works</a>
+            <a href="#privacy">Privacy</a>
+            <a href="#faq">FAQ</a>
+            <a class="nav-cta" href="#beta">Join beta</a>
+        </nav>
+    </header>
+
+    <main id="top">
+        <section class="hero reveal">
+            <div class="hero-copy">
+                <p class="eyebrow">Checkout pause for Android</p>
+                <h1>A minute before you buy.</h1>
+                <p class="hero-sub">
+                    No judgement, just a quick check. CannyMinute spots checkout moments and gives
+                    you a calm pause before you pay.
+                </p>
+                <div class="hero-actions">
+                    <a class="button-primary" href="#beta">Join beta waitlist</a>
+                    <a class="button-ghost" href="#how">See how it works</a>
+                </div>
+                <ul class="hero-points">
+                    <li>Works across shopping apps and browsers</li>
+                    <li>On-device processing by default</li>
+                    <li>Quick 10-second pause, fully adjustable</li>
+                </ul>
+            </div>
+
+            <aside class="hero-card" aria-label="Product highlights">
+                <div class="hero-card-top">
+                    <img src="assets/cannyminute-logo.png" alt="" />
+                    <div>
+                        <p class="card-title">CannyMinute beta</p>
+                        <p class="card-sub">Quick check, then you can still buy it.</p>
+                    </div>
+                </div>
+                <div class="question-list">
+                    <p>Do I need it?</p>
+                    <p>Can I afford it?</p>
+                    <p>Is it cheaper elsewhere?</p>
+                </div>
+                <p class="card-foot">Built for clarity, not guilt.</p>
+            </aside>
+        </section>
+
+        <section class="proof reveal" aria-label="Product principles">
+            <p>Private by default</p>
+            <p>No account required in-app</p>
+            <p>Android 10 and above</p>
+        </section>
+
+        <section id="beta" class="beta reveal">
+            <div class="beta-header">
+                <h2>Join the beta</h2>
+                <p>Be first to test and shape the product. We only send launch and test invites.</p>
+            </div>
+
+            <form id="beta-form" class="beta-form" novalidate>
+                <label for="firstName">First name</label>
+                <input id="firstName" name="firstName" type="text" maxlength="80" autocomplete="given-name" />
+
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" required autocomplete="email" />
+
+                <label for="shopStyle">Biggest impulse-buy moment</label>
+                <select id="shopStyle" name="shopStyle">
+                    <option value="">Select one</option>
+                    <option value="late-night-scroll">Late-night scrolling</option>
+                    <option value="flash-sales">Flash sales and countdown deals</option>
+                    <option value="cart-upsells">Cart upsells at checkout</option>
+                    <option value="social-recos">Social media recommendations</option>
+                </select>
+
+                <input type="hidden" name="source" value="cannyminute_landing" />
+
+                <label class="consent-row" for="consent">
+                    <input id="consent" name="consent" type="checkbox" required />
+                    <span>I agree to receive beta emails from CannyMinute.</span>
+                </label>
+
+                <label class="consent-row" for="alphaTester">
+                    <input id="alphaTester" name="alphaTester" type="checkbox" />
+                    <span>I am happy to test early builds and give feedback.</span>
+                </label>
+
+                <input
+                    class="honeypot"
+                    id="company"
+                    name="company"
+                    type="text"
+                    tabindex="-1"
+                    autocomplete="off"
+                    aria-hidden="true"
+                />
+
+                <button id="submit-button" type="submit">Save my beta spot</button>
+                <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+                <p class="form-note">
+                    On-device only promise: no screen text is stored unless diagnostics is enabled.
+                </p>
+            </form>
+        </section>
+
+        <section id="how" class="how reveal">
+            <h2>How CannyMinute works</h2>
+            <div class="grid-three">
+                <article>
+                    <h3>1. Detect checkout</h3>
+                    <p>Uses Android Accessibility to detect likely checkout signals in apps and browsers.</p>
+                </article>
+                <article>
+                    <h3>2. Run a quick check</h3>
+                    <p>Shows a short timer and three practical questions to reduce impulse decisions.</p>
+                </article>
+                <article>
+                    <h3>3. Keep you in control</h3>
+                    <p>Continue, save for later, or allow-list apps. You decide how strict to be.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="privacy" class="privacy reveal">
+            <div class="privacy-panel">
+                <p class="eyebrow">Trust first</p>
+                <h2>Privacy by default</h2>
+                <p>
+                    CannyMinute processes signals on your phone. Nothing is sold. Nothing is sent
+                    off-device unless you explicitly opt in to diagnostics.
+                </p>
+                <ul>
+                    <li>Accessibility permission explained in plain English</li>
+                    <li>Diagnostics mode is optional and off by default</li>
+                    <li>Temporary bypass and allow-list always available</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="faq" class="faq reveal">
+            <h2>FAQ</h2>
+            <details>
+                <summary>Why does CannyMinute need Accessibility?</summary>
+                <p>
+                    It is required to detect checkout screens in third-party apps and browsers so
+                    the pause screen appears at the right moment.
+                </p>
+            </details>
+            <details>
+                <summary>What data is stored?</summary>
+                <p>
+                    Settings and local event decisions. Screen text is not stored unless diagnostics
+                    is turned on by you.
+                </p>
+            </details>
+            <details>
+                <summary>Can I pause or disable protection?</summary>
+                <p>
+                    Yes. You can toggle protection off, use a temporary bypass, or allow-list specific apps.
+                </p>
+            </details>
+            <details>
+                <summary>What if it triggers at the wrong time?</summary>
+                <p>
+                    You can continue, save for later, and help tune behaviour through optional diagnostics.
+                </p>
+            </details>
+        </section>
+
+        <section class="final-cta reveal">
+            <h2>Ready to launch with us?</h2>
+            <p>Join the beta and get first access when Android builds open.</p>
+            <a class="button-primary" href="#beta">Join beta waitlist</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span id="year"></span> CannyMinute. A minute before you buy.</p>
+        <a href="privacy.html">Privacy</a>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
