@@ -1,5 +1,0 @@
-services:
-  emulator:
-    privileged: true
-    devices:
-      - /dev/kvm:/dev/kvm

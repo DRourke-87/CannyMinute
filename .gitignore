@@ -1,13 +1,3 @@
-# Android/Gradle
-.gradle/
-build/
-*/build/
-local.properties
-
-# IntelliJ/Android Studio
-.idea/
-*.iml
-
 # Windows
 Thumbs.db
 Desktop.ini
