@@ -70,7 +70,9 @@ Then in GitHub Pages settings:
 
 The `website/CNAME` file is included for this.
 
-If this repo remains private, GitHub Pages availability depends on your GitHub plan.
+Important:
+- On GitHub Free, Pages is supported for public repositories.
+- If this repository stays private, your plan must support private-repo Pages.
 
 ## Launch best-practice checklist
 - Keep form friction low: only name + email required.
