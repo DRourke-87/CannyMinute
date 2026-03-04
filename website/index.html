@@ -44,6 +44,7 @@
         </a>
         <nav class="site-nav" aria-label="Primary">
             <a href="#how">How it works</a>
+            <a href="#plans">Plans</a>
             <a href="#privacy">Privacy</a>
             <a href="#faq">FAQ</a>
             <a class="nav-cta" href="#beta">Join beta</a>
@@ -61,12 +62,12 @@
                 </p>
                 <div class="hero-actions">
                     <a class="button-primary" href="#beta">Join beta waitlist</a>
-                    <a class="button-ghost" href="#how">See how it works</a>
+                    <a class="button-ghost" href="#preview">See product screens</a>
                 </div>
                 <ul class="hero-points">
-                    <li>Works across shopping apps and browsers</li>
+                    <li>Checkout intervention across supported shopping apps and browsers</li>
                     <li>On-device processing by default</li>
-                    <li>Quick 10-second pause, fully adjustable</li>
+                    <li>Fixed 30-second cooldown timer in Beta (Free)</li>
                 </ul>
             </div>
 
@@ -74,16 +75,16 @@
                 <div class="hero-card-top">
                     <img src="assets/cannyminute-logo.png" alt="" />
                     <div>
-                        <p class="card-title">CannyMinute beta</p>
-                        <p class="card-sub">Quick check, then you can still buy it.</p>
+                        <p class="card-title">Beta now, Premium next</p>
+                        <p class="card-sub">Quick check now. More control coming soon.</p>
                     </div>
                 </div>
                 <div class="question-list">
-                    <p>Do I need it?</p>
-                    <p>Can I afford it?</p>
-                    <p>Is it cheaper elsewhere?</p>
+                    <p>Beta (Free): 30s cooldown + 3 reflection checks</p>
+                    <p>Premium (Coming Soon): save for later + custom timers</p>
+                    <p>Built for clarity, not guilt.</p>
                 </div>
-                <p class="card-foot">Built for clarity, not guilt.</p>
+                <p class="card-foot">Android 10+, privacy-first, on-device by default.</p>
             </aside>
         </section>
 
@@ -93,10 +94,110 @@
             <p>Android 10 and above</p>
         </section>
 
+        <section id="preview" class="screens reveal" aria-label="App previews">
+            <div class="screens-header">
+                <p class="eyebrow">Product preview</p>
+                <h2>Phone-framed screens from the live Android flow</h2>
+                <p>
+                    The intervention is intentionally calm: quick prompts, clear controls, and no
+                    guilt tactics.
+                </p>
+            </div>
+
+            <div class="phone-gallery">
+                <article class="phone-card">
+                    <div class="phone-shell">
+                        <div class="phone-notch" aria-hidden="true"></div>
+                        <div class="phone-screen">
+                            <img
+                                class="phone-shot"
+                                src="assets/Screenshot_20260304-150153.png"
+                                alt="CannyMinute Quick check screen showing the timer and three reflection prompts before checkout."
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </div>
+                    </div>
+                    <p class="phone-caption">Checkout pause with a fixed 30-second cooldown in Beta.</p>
+                </article>
+
+                <article class="phone-card">
+                    <div class="phone-shell">
+                        <div class="phone-notch" aria-hidden="true"></div>
+                        <div class="phone-screen">
+                            <img
+                                class="phone-shot"
+                                src="assets/Screenshot_20260304-150529.png"
+                                alt="CannyMinute settings screen with Premium tester controls, intervention delay, allow list, and schedule modes."
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </div>
+                    </div>
+                    <p class="phone-caption">Settings preview with Premium controls and schedule modes.</p>
+                </article>
+
+                <article class="phone-card">
+                    <div class="phone-shell">
+                        <div class="phone-notch" aria-hidden="true"></div>
+                        <div class="phone-screen">
+                            <img
+                                class="phone-shot"
+                                src="assets/Screenshot_20260304-150428.png"
+                                alt="CannyMinute home screen showing protection status and advanced settings access."
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </div>
+                    </div>
+                    <p class="phone-caption">Home screen keeps protection state clear at a glance.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="plans" class="plans reveal" aria-label="Plan comparison">
+            <div class="plans-head">
+                <p class="eyebrow">Versions</p>
+                <h2>Beta is free now. Premium is coming soon.</h2>
+                <p>Pick your level of control. Start simple, then tighten rules when you want.</p>
+            </div>
+            <div class="plans-grid">
+                <article class="plan-card">
+                    <div class="plan-head">
+                        <h3>Beta</h3>
+                        <span class="plan-badge">Free</span>
+                    </div>
+                    <ul>
+                        <li>Checkout intervention across supported shopping apps and browsers</li>
+                        <li>3 reflection checks before buying: Do I need it? Can I afford it? Have I checked for a cheaper option?</li>
+                        <li>Fixed 30-second cooldown timer</li>
+                        <li>Basic allow list (up to 3 apps)</li>
+                        <li>Pause protection for 1 hour</li>
+                        <li>Privacy-first, on-device processing</li>
+                        <li>Local diagnostics export (optional)</li>
+                    </ul>
+                </article>
+
+                <article class="plan-card plan-card-soon">
+                    <div class="plan-head">
+                        <h3>Premium</h3>
+                        <span class="plan-badge plan-badge-soon">Coming Soon</span>
+                    </div>
+                    <ul>
+                        <li>Save for later (store checkout links and reopen later)</li>
+                        <li>Custom cooldown timer (10-60 seconds)</li>
+                        <li>Unlimited allow list</li>
+                        <li>Schedule modes (daytime/evening/weekend rules)</li>
+                        <li>More control over intervention behavior and stricter setups</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
         <section id="beta" class="beta reveal">
             <div class="beta-header">
                 <h2>Join the beta</h2>
-                <p>Be first to test and shape the product. We only send launch and test invites.</p>
+                <p>Beta is free. Be first to test and shape the product. We only send launch and test invites.</p>
             </div>
 
             <form id="beta-form" class="beta-form" novalidate>
@@ -154,11 +255,11 @@
                 </article>
                 <article>
                     <h3>2. Run a quick check</h3>
-                    <p>Shows a short timer and three practical questions to reduce impulse decisions.</p>
+                    <p>Shows a fixed 30-second cooldown in Beta and three practical questions before buying.</p>
                 </article>
                 <article>
                     <h3>3. Keep you in control</h3>
-                    <p>Continue, save for later, or allow-list apps. You decide how strict to be.</p>
+                    <p>Continue, pause for one hour, or allow-list apps. Premium adds stricter and scheduled modes.</p>
                 </article>
             </div>
         </section>
@@ -204,7 +305,8 @@
             <details>
                 <summary>What if it triggers at the wrong time?</summary>
                 <p>
-                    You can continue, save for later, and help tune behaviour through optional diagnostics.
+                    You can continue after the cooldown, pause protection for one hour, and help tune
+                    behaviour through optional diagnostics. Save for later is planned for Premium.
                 </p>
             </details>
         </section>
