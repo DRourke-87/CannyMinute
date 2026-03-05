@@ -13,6 +13,7 @@
     }
 
     initRevealAnimations();
+    initQuickJoinForm();
     initBetaForm();
 
     function initRevealAnimations() {
@@ -52,6 +53,12 @@
         const emailInput = document.getElementById("email");
 
         if (emailInput instanceof HTMLInputElement) {
+            const urlEmail = getCandidateEmail(new URLSearchParams(window.location.search).get("email"));
+            if (urlEmail) {
+                emailInput.value = urlEmail;
+                window.localStorage.setItem("cannyminute_beta_email", urlEmail);
+            }
+
             const savedEmail = window.localStorage.getItem("cannyminute_beta_email") || "";
             if (!emailInput.value && savedEmail) {
                 emailInput.value = savedEmail;
@@ -112,6 +119,35 @@
         }
     }
 
+    function initQuickJoinForm() {
+        const form = document.getElementById("quick-join-form");
+        if (!(form instanceof HTMLFormElement)) {
+            return;
+        }
+
+        const emailInput = document.getElementById("quickEmail");
+        if (emailInput instanceof HTMLInputElement) {
+            const savedEmail = window.localStorage.getItem("cannyminute_beta_email") || "";
+            if (!emailInput.value && savedEmail) {
+                emailInput.value = savedEmail;
+            }
+        }
+
+        form.addEventListener("submit", () => {
+            if (!(emailInput instanceof HTMLInputElement)) {
+                return;
+            }
+
+            const email = getCandidateEmail(emailInput.value);
+            if (!email) {
+                return;
+            }
+
+            emailInput.value = email;
+            window.localStorage.setItem("cannyminute_beta_email", email);
+        });
+    }
+
     function buildPayload(form) {
         const data = new FormData(form);
         const payload = {
@@ -146,6 +182,11 @@
 
     function isLikelyEmail(value) {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    }
+
+    function getCandidateEmail(value) {
+        const email = (value || "").toString().trim().toLowerCase();
+        return isLikelyEmail(email) ? email : "";
     }
 
     async function submitLead(payload) {

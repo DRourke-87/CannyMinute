@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CannyMinute | Join beta</title>
+    <meta
+        name="description"
+        content="Join the free CannyMinute beta for Android checkout pause testing and early Premium feedback."
+    />
+    <meta name="theme-color" content="#1e6db6" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="ambient ambient-left" aria-hidden="true"></div>
+    <div class="ambient ambient-right" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="CannyMinute home">
+            <img src="assets/cannyminute-logo.png" alt="" />
+            <span>CannyMinute</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="index.html#how">How it works</a>
+            <a href="index.html#plans">Plans</a>
+            <a href="privacy.html">Privacy</a>
+            <a class="nav-cta" href="join-beta.html">Join beta</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="beta reveal">
+            <div class="beta-header">
+                <p class="eyebrow">Beta signup</p>
+                <h1>Join the CannyMinute beta</h1>
+                <p>Beta is free. Share a few details so we can send test invites and updates.</p>
+            </div>
+
+            <form id="beta-form" class="beta-form" novalidate>
+                <label for="firstName">First name</label>
+                <input id="firstName" name="firstName" type="text" maxlength="80" autocomplete="given-name" />
+
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" required autocomplete="email" />
+
+                <label for="shopStyle">Biggest impulse-buy moment</label>
+                <select id="shopStyle" name="shopStyle">
+                    <option value="">Select one</option>
+                    <option value="late-night-scroll">Late-night scrolling</option>
+                    <option value="flash-sales">Flash sales and countdown deals</option>
+                    <option value="cart-upsells">Cart upsells at checkout</option>
+                    <option value="social-recos">Social media recommendations</option>
+                </select>
+
+                <input type="hidden" name="source" value="cannyminute_landing" />
+
+                <label class="consent-row" for="consent">
+                    <input id="consent" name="consent" type="checkbox" required />
+                    <span>I agree to receive beta emails from CannyMinute.</span>
+                </label>
+
+                <label class="consent-row" for="alphaTester">
+                    <input id="alphaTester" name="alphaTester" type="checkbox" />
+                    <span>I am happy to test early builds and give feedback.</span>
+                </label>
+
+                <input
+                    class="honeypot"
+                    id="company"
+                    name="company"
+                    type="text"
+                    tabindex="-1"
+                    autocomplete="off"
+                    aria-hidden="true"
+                />
+
+                <button id="submit-button" type="submit">Save my beta spot</button>
+                <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+                <p class="form-note">
+                    On-device only promise: no screen text is stored unless diagnostics is enabled.
+                </p>
+            </form>
+        </section>
+
+        <section class="final-cta reveal">
+            <h2>Prefer to read first?</h2>
+            <p>Go back to the homepage for the product overview and feature comparison.</p>
+            <a class="button-ghost" href="index.html">Back to homepage</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span id="year"></span> CannyMinute. A pause before you buy.</p>
+        <a href="privacy.html">Privacy</a>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

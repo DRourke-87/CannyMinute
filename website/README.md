@@ -8,6 +8,7 @@ This combination keeps costs at zero for early launch, and gives you one CSV/She
 
 ## Folder layout
 - `index.html`: landing page.
+- `join-beta.html`: full beta signup form page.
 - `privacy.html`: privacy summary page.
 - `styles.css`: site styling.
 - `app.js`: interactions and lead form submission.
@@ -37,7 +38,7 @@ Open `http://localhost:8080`.
    - Who has access: `Anyone`.
 7. Copy the web app URL.
 
-## 3) Configure landing page form
+## 3) Configure beta form endpoint
 In `config.js`, set:
 
 ```js
@@ -78,7 +79,7 @@ Important:
 - If this repository stays private, your plan must support private-repo Pages.
 
 ## Launch best-practice checklist
-- Keep form friction low: only name + email required.
+- Keep homepage friction low: email capture first, full form second.
 - Add anti-spam honeypot (already included).
 - Promise frequency: set expectation for email cadence.
 - Use double opt-in for production email platform later.
